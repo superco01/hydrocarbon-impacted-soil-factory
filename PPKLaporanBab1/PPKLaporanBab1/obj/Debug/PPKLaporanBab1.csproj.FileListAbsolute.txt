@@ -1,0 +1,10 @@
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\bin\Debug\PPKLaporanBab1.exe.config
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\bin\Debug\PPKLaporanBab1.exe
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\bin\Debug\PPKLaporanBab1.pdb
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.csprojResolveAssemblyReference.cache
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.Properties.Resources.resources
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.csproj.GenerateResource.Cache
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.csproj.CoreCompileInputs.cache
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.exe
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.pdb
+c:\users\bibu\source\repos\PPKLaporanBab1\PPKLaporanBab1\obj\Debug\PPKLaporanBab1.Form1.resources
