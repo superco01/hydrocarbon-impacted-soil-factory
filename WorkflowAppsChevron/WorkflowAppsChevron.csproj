@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <ProjectGuid>{DBE263A1-1631-4897-9514-D3BF3BC1D2D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkflowAppsChevron</RootNamespace>
+    <AssemblyName>WorkflowAppsChevron</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.DataProtection.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.DataProtection.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Razor">
+      <HintPath>..\packages\Microsoft.AspNetCore.Razor.1.0.0\lib\net451\Microsoft.AspNetCore.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DotNet.InternalAbstractions">
+      <HintPath>..\packages\Microsoft.DotNet.InternalAbstractions.1.0.0\lib\net451\Microsoft.DotNet.InternalAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.1.0.0\lib\net451\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.1.0.0\lib\net451\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.PlatformAbstractions">
+      <HintPath>..\packages\Microsoft.Extensions.PlatformAbstractions.1.0.0\lib\net451\Microsoft.Extensions.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.1.0.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>..\packages\System.AppContext.4.1.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Buffers">
+      <HintPath>..\packages\System.Buffers.4.0.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.1.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>..\packages\System.ComponentModel.TypeConverter.4.1.0\lib\net45\System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>..\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>..\packages\System.Data.Common.4.1.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>..\packages\System.Diagnostics.FileVersionInfo.4.0.0\lib\net46\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>..\packages\System.Diagnostics.StackTrace.4.0.1\lib\net46\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>..\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>..\packages\System.Reflection.Metadata.1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Diagnostics.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Diagnostics.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Globalization.CultureInfoCache">
+      <HintPath>..\packages\Microsoft.Extensions.Globalization.CultureInfoCache.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Globalization.CultureInfoCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Localization.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Localization.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Localization.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="Microsoft.Extensions.Primitives">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.1.0.0\lib\net451\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Composite">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Composite.1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.1.0.0\lib\net451\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.1.1\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.1.0.0\lib\netstandard1.1\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.0.1\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.JsonPatch">
+      <HintPath>..\packages\Microsoft.AspNetCore.JsonPatch.1.0.0\lib\netstandard1.1\Microsoft.AspNetCore.JsonPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Html.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Html.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.1.0.0\lib\net451\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Razor.Runtime">
+      <HintPath>..\packages\Microsoft.AspNetCore.Razor.Runtime.1.0.0\lib\net451\Microsoft.AspNetCore.Razor.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Abstractions.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.1.0.0\lib\net451\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>..\packages\Microsoft.Extensions.Options.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cors">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cors.1.0.0\lib\net451\Microsoft.AspNetCore.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.DataProtection">
+      <HintPath>..\packages\Microsoft.AspNetCore.DataProtection.1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="Microsoft.AspNetCore.Antiforgery">
+      <HintPath>..\packages\Microsoft.AspNetCore.Antiforgery.1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.1.0.0\lib\net451\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Localization">
+      <HintPath>..\packages\Microsoft.AspNetCore.Localization.1.0.0\lib\net451\Microsoft.AspNetCore.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.1.0.0\lib\net451\Microsoft.AspNetCore.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Core.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.ApiExplorer">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.ApiExplorer.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ApiExplorer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Cors">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Cors.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Formatters.Json">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Formatters.Json.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Formatters.Xml.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Localization">
+      <HintPath>..\packages\Microsoft.Extensions.Localization.1.0.0\lib\net451\Microsoft.Extensions.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.DataAnnotations">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.DataAnnotations.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.WebEncoders">
+      <HintPath>..\packages\Microsoft.Extensions.WebEncoders.1.0.0\lib\netstandard1.0\Microsoft.Extensions.WebEncoders.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.ViewFeatures.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.1.0.0\lib\net451\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Razor.Host">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Razor.Host.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\packages\System.Threading.Thread.4.0.0\lib\net46\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>..\packages\System.Xml.XmlDocument.4.0.1\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>..\packages\System.Xml.XPath.4.0.1\lib\net46\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>..\packages\System.Xml.XPath.XDocument.4.0.1\lib\net46\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.3.0\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.3.0\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Razor">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Razor.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Localization">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Localization.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.TagHelpers">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.TagHelpers.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.TagHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\packages\Kendo.Mvc.2016.2.616\lib\net451\Kendo.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="gojs\api\index.html" />
+    <Content Include="gojs\api\symbols\ActionTool.html" />
+    <Content Include="gojs\api\symbols\Adornment.html" />
+    <Content Include="gojs\api\symbols\AnimationManager.html" />
+    <Content Include="gojs\api\symbols\Binding.html" />
+    <Content Include="gojs\api\symbols\Brush.html" />
+    <Content Include="gojs\api\symbols\ChangedEvent.html" />
+    <Content Include="gojs\api\symbols\CircularEdge.html" />
+    <Content Include="gojs\api\symbols\CircularLayout.html" />
+    <Content Include="gojs\api\symbols\CircularNetwork.html" />
+    <Content Include="gojs\api\symbols\CircularVertex.html" />
+    <Content Include="gojs\api\symbols\ClickCreatingTool.html" />
+    <Content Include="gojs\api\symbols\ClickSelectingTool.html" />
+    <Content Include="gojs\api\symbols\CommandHandler.html" />
+    <Content Include="gojs\api\symbols\ContextMenuTool.html" />
+    <Content Include="gojs\api\symbols\Diagram.html" />
+    <Content Include="gojs\api\symbols\DiagramEvent.html" />
+    <Content Include="gojs\api\symbols\DraggingTool.html" />
+    <Content Include="gojs\api\symbols\DragSelectingTool.html" />
+    <Content Include="gojs\api\symbols\ForceDirectedEdge.html" />
+    <Content Include="gojs\api\symbols\ForceDirectedLayout.html" />
+    <Content Include="gojs\api\symbols\ForceDirectedNetwork.html" />
+    <Content Include="gojs\api\symbols\ForceDirectedVertex.html" />
+    <Content Include="gojs\api\symbols\Geometry.html" />
+    <Content Include="gojs\api\symbols\GraphLinksModel.html" />
+    <Content Include="gojs\api\symbols\GraphObject.html" />
+    <Content Include="gojs\api\symbols\GridLayout.html" />
+    <Content Include="gojs\api\symbols\Group.html" />
+    <Content Include="gojs\api\symbols\HTMLInfo.html" />
+    <Content Include="gojs\api\symbols\InputEvent.html" />
+    <Content Include="gojs\api\symbols\Iterable.html" />
+    <Content Include="gojs\api\symbols\Iterator.html" />
+    <Content Include="gojs\api\symbols\Layer.html" />
+    <Content Include="gojs\api\symbols\LayeredDigraphEdge.html" />
+    <Content Include="gojs\api\symbols\LayeredDigraphLayout.html" />
+    <Content Include="gojs\api\symbols\LayeredDigraphNetwork.html" />
+    <Content Include="gojs\api\symbols\LayeredDigraphVertex.html" />
+    <Content Include="gojs\api\symbols\Layout.html" />
+    <Content Include="gojs\api\symbols\LayoutEdge.html" />
+    <Content Include="gojs\api\symbols\LayoutNetwork.html" />
+    <Content Include="gojs\api\symbols\LayoutVertex.html" />
+    <Content Include="gojs\api\symbols\Link.html" />
+    <Content Include="gojs\api\symbols\LinkingBaseTool.html" />
+    <Content Include="gojs\api\symbols\LinkingTool.html" />
+    <Content Include="gojs\api\symbols\LinkReshapingTool.html" />
+    <Content Include="gojs\api\symbols\List.html" />
+    <Content Include="gojs\api\symbols\Map.html" />
+    <Content Include="gojs\api\symbols\Margin.html" />
+    <Content Include="gojs\api\symbols\Model.html" />
+    <Content Include="gojs\api\symbols\Node.html" />
+    <Content Include="gojs\api\symbols\Overview.html" />
+    <Content Include="gojs\api\symbols\Palette.html" />
+    <Content Include="gojs\api\symbols\Panel.html" />
+    <Content Include="gojs\api\symbols\PanningTool.html" />
+    <Content Include="gojs\api\symbols\Part.html" />
+    <Content Include="gojs\api\symbols\PathFigure.html" />
+    <Content Include="gojs\api\symbols\PathSegment.html" />
+    <Content Include="gojs\api\symbols\Picture.html" />
+    <Content Include="gojs\api\symbols\Placeholder.html" />
+    <Content Include="gojs\api\symbols\Point.html" />
+    <Content Include="gojs\api\symbols\Rect.html" />
+    <Content Include="gojs\api\symbols\RelinkingTool.html" />
+    <Content Include="gojs\api\symbols\ResizingTool.html" />
+    <Content Include="gojs\api\symbols\RotatingTool.html" />
+    <Content Include="gojs\api\symbols\RowColumnDefinition.html" />
+    <Content Include="gojs\api\symbols\Set.html" />
+    <Content Include="gojs\api\symbols\Shape.html" />
+    <Content Include="gojs\api\symbols\Size.html" />
+    <Content Include="gojs\api\symbols\Spot.html" />
+    <Content Include="gojs\api\symbols\TextBlock.html" />
+    <Content Include="gojs\api\symbols\TextEditingTool.html" />
+    <Content Include="gojs\api\symbols\Tool.html" />
+    <Content Include="gojs\api\symbols\ToolManager.html" />
+    <Content Include="gojs\api\symbols\Transaction.html" />
+    <Content Include="gojs\api\symbols\TreeEdge.html" />
+    <Content Include="gojs\api\symbols\TreeLayout.html" />
+    <Content Include="gojs\api\symbols\TreeModel.html" />
+    <Content Include="gojs\api\symbols\TreeNetwork.html" />
+    <Content Include="gojs\api\symbols\TreeVertex.html" />
+    <Content Include="gojs\api\symbols\UndoManager.html" />
+    <Content Include="gojs\assets\css\api.css" />
+    <Content Include="gojs\assets\css\bootstrap.min.css" />
+    <Content Include="gojs\assets\css\highlight.css" />
+    <Content Include="gojs\assets\css\images\ui-icons_444444_256x240.png" />
+    <Content Include="gojs\assets\css\images\ui-icons_555555_256x240.png" />
+    <Content Include="gojs\assets\css\images\ui-icons_777620_256x240.png" />
+    <Content Include="gojs\assets\css\images\ui-icons_777777_256x240.png" />
+    <Content Include="gojs\assets\css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="gojs\assets\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="gojs\assets\css\jquery-ui.min.css" />
+    <Content Include="gojs\assets\css\main.css" />
+    <Content Include="gojs\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gojs\assets\images\banner.png" />
+    <Content Include="gojs\assets\images\banner2.png" />
+    <Content Include="gojs\assets\images\banner3.png" />
+    <Content Include="gojs\assets\images\book.png" />
+    <Content Include="gojs\assets\images\sample.png" />
+    <Content Include="gojs\assets\images\screenshots\absolute.png" />
+    <Content Include="gojs\assets\images\screenshots\addRemoveColumns.png" />
+    <Content Include="gojs\assets\images\screenshots\adornmentButtons.png" />
+    <Content Include="gojs\assets\images\screenshots\arrowheads.png" />
+    <Content Include="gojs\assets\images\screenshots\BalloonLink.png" />
+    <Content Include="gojs\assets\images\screenshots\barCharts.png" />
+    <Content Include="gojs\assets\images\screenshots\basic.png" />
+    <Content Include="gojs\assets\images\screenshots\beatPaths.png" />
+    <Content Include="gojs\assets\images\screenshots\BPMN.png" />
+    <Content Include="gojs\assets\images\screenshots\candlestickCharts.png" />
+    <Content Include="gojs\assets\images\screenshots\canvases.png" />
+    <Content Include="gojs\assets\images\screenshots\checkboxes.png" />
+    <Content Include="gojs\assets\images\screenshots\classHierarchy.png" />
+    <Content Include="gojs\assets\images\screenshots\cLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\ColumnResizing.png" />
+    <Content Include="gojs\assets\images\screenshots\comments.png" />
+    <Content Include="gojs\assets\images\screenshots\conceptMap.png" />
+    <Content Include="gojs\assets\images\screenshots\contentAlign.png" />
+    <Content Include="gojs\assets\images\screenshots\curvedLinkReshaping.png" />
+    <Content Include="gojs\assets\images\screenshots\curviness.png" />
+    <Content Include="gojs\assets\images\screenshots\customContextMenu.png" />
+    <Content Include="gojs\assets\images\screenshots\customExpandCollapse.png" />
+    <Content Include="gojs\assets\images\screenshots\customTextEditingTool.png" />
+    <Content Include="gojs\assets\images\screenshots\dataFlow.png" />
+    <Content Include="gojs\assets\images\screenshots\dataFlowVertical.png" />
+    <Content Include="gojs\assets\images\screenshots\dataInspector.png" />
+    <Content Include="gojs\assets\images\screenshots\dataVisualization.png" />
+    <Content Include="gojs\assets\images\screenshots\debugInspector.png" />
+    <Content Include="gojs\assets\images\screenshots\decisionTree.png" />
+    <Content Include="gojs\assets\images\screenshots\Dimensioning.png" />
+    <Content Include="gojs\assets\images\screenshots\distances.png" />
+    <Content Include="gojs\assets\images\screenshots\DOMTree.png" />
+    <Content Include="gojs\assets\images\screenshots\doubleCircle.png" />
+    <Content Include="gojs\assets\images\screenshots\doubleTree.png" />
+    <Content Include="gojs\assets\images\screenshots\DragCreating.png" />
+    <Content Include="gojs\assets\images\screenshots\draggableLink.png" />
+    <Content Include="gojs\assets\images\screenshots\draggablePorts.png" />
+    <Content Include="gojs\assets\images\screenshots\dragUnoccupied.png" />
+    <Content Include="gojs\assets\images\screenshots\DragZooming.png" />
+    <Content Include="gojs\assets\images\screenshots\DrawCommandHandler.png" />
+    <Content Include="gojs\assets\images\screenshots\dynamicPieChart.png" />
+    <Content Include="gojs\assets\images\screenshots\dynamicports.png" />
+    <Content Include="gojs\assets\images\screenshots\entityRelationship.png" />
+    <Content Include="gojs\assets\images\screenshots\euler.png" />
+    <Content Include="gojs\assets\images\screenshots\extensions.png" />
+    <Content Include="gojs\assets\images\screenshots\familyTree.png" />
+    <Content Include="gojs\assets\images\screenshots\familyTreeJP.png" />
+    <Content Include="gojs\assets\images\screenshots\faultTree.png" />
+    <Content Include="gojs\assets\images\screenshots\fdLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\Fishbone.png" />
+    <Content Include="gojs\assets\images\screenshots\FloorPlanEditor.png" />
+    <Content Include="gojs\assets\images\screenshots\floorPlanMonitor.png" />
+    <Content Include="gojs\assets\images\screenshots\FloorPlanner.png" />
+    <Content Include="gojs\assets\images\screenshots\flowBuilder.png" />
+    <Content Include="gojs\assets\images\screenshots\flowchart.png" />
+    <Content Include="gojs\assets\images\screenshots\flowgrammer.png" />
+    <Content Include="gojs\assets\images\screenshots\FreehandDrawing.png" />
+    <Content Include="gojs\assets\images\screenshots\friendWheel.png" />
+    <Content Include="gojs\assets\images\screenshots\gantt.png" />
+    <Content Include="gojs\assets\images\screenshots\genogram.png" />
+    <Content Include="gojs\assets\images\screenshots\GeometryReshaping.png" />
+    <Content Include="gojs\assets\images\screenshots\gLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\GoCloudStorageManager.png" />
+    <Content Include="gojs\assets\images\screenshots\grafcet.png" />
+    <Content Include="gojs\assets\images\screenshots\grouping.png" />
+    <Content Include="gojs\assets\images\screenshots\GuidedDragging.png" />
+    <Content Include="gojs\assets\images\screenshots\hoverButtons.png" />
+    <Content Include="gojs\assets\images\screenshots\htmlDragDrop.png" />
+    <Content Include="gojs\assets\images\screenshots\htmlinteraction.png" />
+    <Content Include="gojs\assets\images\screenshots\htmlLightBoxContextMenu.png" />
+    <Content Include="gojs\assets\images\screenshots\Hyperlink.png" />
+    <Content Include="gojs\assets\images\screenshots\icons.png" />
+    <Content Include="gojs\assets\images\screenshots\incrementalTree.png" />
+    <Content Include="gojs\assets\images\screenshots\instrumentGauge.png" />
+    <Content Include="gojs\assets\images\screenshots\interactiveForce.png" />
+    <Content Include="gojs\assets\images\screenshots\ivrTree.png" />
+    <Content Include="gojs\assets\images\screenshots\jQueryDragDrop.png" />
+    <Content Include="gojs\assets\images\screenshots\kanban.png" />
+    <Content Include="gojs\assets\images\screenshots\kittenMonitor.png" />
+    <Content Include="gojs\assets\images\screenshots\ldLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\leaflet.png" />
+    <Content Include="gojs\assets\images\screenshots\learn.png" />
+    <Content Include="gojs\assets\images\screenshots\LinkLabelDragging.png" />
+    <Content Include="gojs\assets\images\screenshots\LinkLabelOnPathDragging.png" />
+    <Content Include="gojs\assets\images\screenshots\LinkShifting.png" />
+    <Content Include="gojs\assets\images\screenshots\linksToLinks.png" />
+    <Content Include="gojs\assets\images\screenshots\LocalStorageCommandHandler.png" />
+    <Content Include="gojs\assets\images\screenshots\localView.png" />
+    <Content Include="gojs\assets\images\screenshots\logicCircuit.png" />
+    <Content Include="gojs\assets\images\screenshots\macros.png" />
+    <Content Include="gojs\assets\images\screenshots\magnifier.png" />
+    <Content Include="gojs\assets\images\screenshots\mindMap.png" />
+    <Content Include="gojs\assets\images\screenshots\minimal.png" />
+    <Content Include="gojs\assets\images\screenshots\multiArrow.png" />
+    <Content Include="gojs\assets\images\screenshots\multiNodePathLinks.png" />
+    <Content Include="gojs\assets\images\screenshots\navigation.png" />
+    <Content Include="gojs\assets\images\screenshots\network.png" />
+    <Content Include="gojs\assets\images\screenshots\NodeLabelDragging.png" />
+    <Content Include="gojs\assets\images\screenshots\NonRealtimeDragging.png" />
+    <Content Include="gojs\assets\images\screenshots\orgChartAssistants.png" />
+    <Content Include="gojs\assets\images\screenshots\orgChartEditor.png" />
+    <Content Include="gojs\assets\images\screenshots\orgChartExtras.png" />
+    <Content Include="gojs\assets\images\screenshots\orgChartStatic.png" />
+    <Content Include="gojs\assets\images\screenshots\orthogonalLinkReshaping.png" />
+    <Content Include="gojs\assets\images\screenshots\pageflow.png" />
+    <Content Include="gojs\assets\images\screenshots\Parallel.png" />
+    <Content Include="gojs\assets\images\screenshots\ParallelRoute.png" />
+    <Content Include="gojs\assets\images\screenshots\parseTree.png" />
+    <Content Include="gojs\assets\images\screenshots\pathAnimation.png" />
+    <Content Include="gojs\assets\images\screenshots\pert.png" />
+    <Content Include="gojs\assets\images\screenshots\pieCharts.png" />
+    <Content Include="gojs\assets\images\screenshots\pipes.png" />
+    <Content Include="gojs\assets\images\screenshots\pipeTree.png" />
+    <Content Include="gojs\assets\images\screenshots\planogram.png" />
+    <Content Include="gojs\assets\images\screenshots\PolygonDrawing.png" />
+    <Content Include="gojs\assets\images\screenshots\PolylineLinking.png" />
+    <Content Include="gojs\assets\images\screenshots\PortShifting.png" />
+    <Content Include="gojs\assets\images\screenshots\processFlow.png" />
+    <Content Include="gojs\assets\images\screenshots\productionProcess.png" />
+    <Content Include="gojs\assets\images\screenshots\radial.png" />
+    <Content Include="gojs\assets\images\screenshots\radialPartition.png" />
+    <Content Include="gojs\assets\images\screenshots\realtimeDragSelecting.png" />
+    <Content Include="gojs\assets\images\screenshots\records.png" />
+    <Content Include="gojs\assets\images\screenshots\regrouping.png" />
+    <Content Include="gojs\assets\images\screenshots\regroupingScaled.png" />
+    <Content Include="gojs\assets\images\screenshots\relationships.png" />
+    <Content Include="gojs\assets\images\screenshots\ResizeMultiple.png" />
+    <Content Include="gojs\assets\images\screenshots\robot.png" />
+    <Content Include="gojs\assets\images\screenshots\RotateMultiple.png" />
+    <Content Include="gojs\assets\images\screenshots\roundedGroups.png" />
+    <Content Include="gojs\assets\images\screenshots\ruleredDiagram.png" />
+    <Content Include="gojs\assets\images\screenshots\sankey.png" />
+    <Content Include="gojs\assets\images\screenshots\ScrollingTable.png" />
+    <Content Include="gojs\assets\images\screenshots\scrollModes.png" />
+    <Content Include="gojs\assets\images\screenshots\seatingchart.png" />
+    <Content Include="gojs\assets\images\screenshots\SectorReshaping.png" />
+    <Content Include="gojs\assets\images\screenshots\selectableFields.png" />
+    <Content Include="gojs\assets\images\screenshots\selectablePorts.png" />
+    <Content Include="gojs\assets\images\screenshots\sequenceDiagram.png" />
+    <Content Include="gojs\assets\images\screenshots\sequentialFunction.png" />
+    <Content Include="gojs\assets\images\screenshots\Serpentine.png" />
+    <Content Include="gojs\assets\images\screenshots\shapes.png" />
+    <Content Include="gojs\assets\images\screenshots\sharedStates.png" />
+    <Content Include="gojs\assets\images\screenshots\shopFloorMonitor.png" />
+    <Content Include="gojs\assets\images\screenshots\snapLinkReshaping.png" />
+    <Content Include="gojs\assets\images\screenshots\sparklineGraphs.png" />
+    <Content Include="gojs\assets\images\screenshots\Spiral.png" />
+    <Content Include="gojs\assets\images\screenshots\spreadsheet.png" />
+    <Content Include="gojs\assets\images\screenshots\statechart.png" />
+    <Content Include="gojs\assets\images\screenshots\swimbands.png" />
+    <Content Include="gojs\assets\images\screenshots\swimlanes.png" />
+    <Content Include="gojs\assets\images\screenshots\swimLanesVertical.png" />
+    <Content Include="gojs\assets\images\screenshots\systemDynamics.png" />
+    <Content Include="gojs\assets\images\screenshots\Table.png" />
+    <Content Include="gojs\assets\images\screenshots\tabs.png" />
+    <Content Include="gojs\assets\images\screenshots\taperedLinks.png" />
+    <Content Include="gojs\assets\images\screenshots\TextEditor.png" />
+    <Content Include="gojs\assets\images\screenshots\thermometer.png" />
+    <Content Include="gojs\assets\images\screenshots\tiger.png" />
+    <Content Include="gojs\assets\images\screenshots\timeline.png" />
+    <Content Include="gojs\assets\images\screenshots\tLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\tournament.png" />
+    <Content Include="gojs\assets\images\screenshots\TreeMap.png" />
+    <Content Include="gojs\assets\images\screenshots\treeMapper.png" />
+    <Content Include="gojs\assets\images\screenshots\treeView.png" />
+    <Content Include="gojs\assets\images\screenshots\triStateCheckBoxTree.png" />
+    <Content Include="gojs\assets\images\screenshots\twoHalves.png" />
+    <Content Include="gojs\assets\images\screenshots\umlClass.png" />
+    <Content Include="gojs\assets\images\screenshots\unlisted.png" />
+    <Content Include="gojs\assets\images\screenshots\updateDemo.png" />
+    <Content Include="gojs\assets\images\screenshots\virtualized.png" />
+    <Content Include="gojs\assets\images\screenshots\virtualizedForceLayout.png" />
+    <Content Include="gojs\assets\images\screenshots\virtualizedTree.png" />
+    <Content Include="gojs\assets\images\screenshots\visualTree.png" />
+    <Content Include="gojs\assets\images\screenshots\visualTreeGrouping.png" />
+    <Content Include="gojs\assets\images\screenshots\vue.png" />
+    <Content Include="gojs\assets\images\search.png" />
+    <Content Include="gojs\assets\images\site1.png" />
+    <Content Include="gojs\assets\images\site2.png" />
+    <Content Include="gojs\assets\images\site3.png" />
+    <Content Include="gojs\assets\images\site4.png" />
+    <Content Include="gojs\assets\images\site5.png" />
+    <Content Include="gojs\assets\images\site6.png" />
+    <Content Include="gojs\assets\images\site7.png" />
+    <Content Include="gojs\assets\images\site8.png" />
+    <Content Include="gojs\assets\js\api.js" />
+    <Content Include="gojs\assets\js\bootstrap.min.js" />
+    <Content Include="gojs\assets\js\fuse.min.js" />
+    <Content Include="gojs\assets\js\goDoc.js" />
+    <Content Include="gojs\assets\js\goSamples.js" />
+    <Content Include="gojs\assets\js\highlight.js" />
+    <Content Include="gojs\assets\js\jquery-ui.min.js" />
+    <Content Include="gojs\assets\js\jquery.min.js" />
+    <Content Include="gojs\doc\changelog.html" />
+    <Content Include="gojs\doc\download.html" />
+    <Content Include="gojs\doc\license.html" />
+    <Content Include="gojs\extensionsTS\Arrowheads.js" />
+    <Content Include="gojs\extensionsTS\BalloonLink.html" />
+    <Content Include="gojs\extensionsTS\BalloonLink.js" />
+    <Content Include="gojs\extensionsTS\BalloonLinkScript.js" />
+    <Content Include="gojs\extensionsTS\BPMN.css" />
+    <Content Include="gojs\extensionsTS\BPMN.html" />
+    <Content Include="gojs\extensionsTS\BPMNClasses.js" />
+    <Content Include="gojs\extensionsTS\BPMNScript.js" />
+    <Content Include="gojs\extensionsTS\Buttons.js" />
+    <Content Include="gojs\extensionsTS\CheckBoxes.html" />
+    <Content Include="gojs\extensionsTS\CheckBoxesScript.js" />
+    <Content Include="gojs\extensionsTS\ColumnResizing.html" />
+    <Content Include="gojs\extensionsTS\ColumnResizingScript.js" />
+    <Content Include="gojs\extensionsTS\ColumnResizingTool.js" />
+    <Content Include="gojs\extensionsTS\CurvedLinkReshaping.html" />
+    <Content Include="gojs\extensionsTS\CurvedLinkReshapingScript.js" />
+    <Content Include="gojs\extensionsTS\CurvedLinkReshapingTool.js" />
+    <Content Include="gojs\extensionsTS\DataInspector.css" />
+    <Content Include="gojs\extensionsTS\DataInspector.html" />
+    <Content Include="gojs\extensionsTS\DataInspector.js" />
+    <Content Include="gojs\extensionsTS\DataInspectorScript.js" />
+    <Content Include="gojs\extensionsTS\Dimensioning.html" />
+    <Content Include="gojs\extensionsTS\DimensioningLink.js" />
+    <Content Include="gojs\extensionsTS\DimensioningScript.js" />
+    <Content Include="gojs\extensionsTS\DragCreating.html" />
+    <Content Include="gojs\extensionsTS\DragCreatingScript.js" />
+    <Content Include="gojs\extensionsTS\DragCreatingTool.js" />
+    <Content Include="gojs\extensionsTS\DragZooming.html" />
+    <Content Include="gojs\extensionsTS\DragZoomingScript.js" />
+    <Content Include="gojs\extensionsTS\DragZoomingTool.js" />
+    <Content Include="gojs\extensionsTS\DrawCommandHandler.html" />
+    <Content Include="gojs\extensionsTS\DrawCommandHandler.js" />
+    <Content Include="gojs\extensionsTS\DrawCommandHandlerScript.js" />
+    <Content Include="gojs\extensionsTS\ExtendedBrush.js" />
+    <Content Include="gojs\extensionsTS\Figures.js" />
+    <Content Include="gojs\extensionsTS\Fishbone.html" />
+    <Content Include="gojs\extensionsTS\FishboneLayout.js" />
+    <Content Include="gojs\extensionsTS\FishboneScript.js" />
+    <Content Include="gojs\extensionsTS\FloorPlanEditor.html" />
+    <Content Include="gojs\extensionsTS\FloorPlanEditorScript.js" />
+    <Content Include="gojs\extensionsTS\FloorPlanMonitor.html" />
+    <Content Include="gojs\extensionsTS\FloorPlanMonitorScript.js" />
+    <Content Include="gojs\extensionsTS\FloorPlanner.html" />
+    <Content Include="gojs\extensionsTS\FreehandDrawing.html" />
+    <Content Include="gojs\extensionsTS\FreehandDrawingScript.js" />
+    <Content Include="gojs\extensionsTS\FreehandDrawingTool.js" />
+    <Content Include="gojs\extensionsTS\GeometryReshaping.html" />
+    <Content Include="gojs\extensionsTS\GeometryReshapingScript.js" />
+    <Content Include="gojs\extensionsTS\GeometryReshapingTool.js" />
+    <Content Include="gojs\extensionsTS\GuidedDragging.html" />
+    <Content Include="gojs\extensionsTS\GuidedDraggingScript.js" />
+    <Content Include="gojs\extensionsTS\GuidedDraggingTool.js" />
+    <Content Include="gojs\extensionsTS\Hyperlink.html" />
+    <Content Include="gojs\extensionsTS\HyperlinkScript.js" />
+    <Content Include="gojs\extensionsTS\HyperlinkText.js" />
+    <Content Include="gojs\extensionsTS\index.html" />
+    <Content Include="gojs\extensionsTS\LightBoxContextMenu.css" />
+    <Content Include="gojs\extensionsTS\LightBoxContextMenu.js" />
+    <Content Include="gojs\extensionsTS\LinkLabelDragging.html" />
+    <Content Include="gojs\extensionsTS\LinkLabelDraggingScript.js" />
+    <Content Include="gojs\extensionsTS\LinkLabelDraggingTool.js" />
+    <Content Include="gojs\extensionsTS\LinkLabelOnPathDragging.html" />
+    <Content Include="gojs\extensionsTS\LinkLabelOnPathDraggingScript.js" />
+    <Content Include="gojs\extensionsTS\LinkLabelOnPathDraggingTool.js" />
+    <Content Include="gojs\extensionsTS\LinkShifting.html" />
+    <Content Include="gojs\extensionsTS\LinkShiftingScript.js" />
+    <Content Include="gojs\extensionsTS\LinkShiftingTool.js" />
+    <Content Include="gojs\extensionsTS\LocalStorageCommandHandler.html" />
+    <Content Include="gojs\extensionsTS\LocalStorageCommandHandler.js" />
+    <Content Include="gojs\extensionsTS\LocalStorageCommandHandlerScript.js" />
+    <Content Include="gojs\extensionsTS\NodeLabelDragging.html" />
+    <Content Include="gojs\extensionsTS\NodeLabelDraggingScript.js" />
+    <Content Include="gojs\extensionsTS\NodeLabelDraggingTool.js" />
+    <Content Include="gojs\extensionsTS\NonRealtimeDragging.html" />
+    <Content Include="gojs\extensionsTS\NonRealtimeDraggingScript.js" />
+    <Content Include="gojs\extensionsTS\NonRealtimeDraggingTool.js" />
+    <Content Include="gojs\extensionsTS\OrthogonalLinkReshaping.html" />
+    <Content Include="gojs\extensionsTS\OrthogonalLinkReshapingScript.js" />
+    <Content Include="gojs\extensionsTS\OrthogonalLinkReshapingTool.js" />
+    <Content Include="gojs\extensionsTS\Parallel.html" />
+    <Content Include="gojs\extensionsTS\ParallelLayout.js" />
+    <Content Include="gojs\extensionsTS\ParallelRoute.html" />
+    <Content Include="gojs\extensionsTS\ParallelRouteLink.js" />
+    <Content Include="gojs\extensionsTS\ParallelRouteScript.js" />
+    <Content Include="gojs\extensionsTS\ParallelScript.js" />
+    <Content Include="gojs\extensionsTS\PolygonDrawing.html" />
+    <Content Include="gojs\extensionsTS\PolygonDrawingScript.js" />
+    <Content Include="gojs\extensionsTS\PolygonDrawingTool.js" />
+    <Content Include="gojs\extensionsTS\PolylineLinking.html" />
+    <Content Include="gojs\extensionsTS\PolylineLinkingScript.js" />
+    <Content Include="gojs\extensionsTS\PolylineLinkingTool.js" />
+    <Content Include="gojs\extensionsTS\PortShifting.html" />
+    <Content Include="gojs\extensionsTS\PortShiftingScript.js" />
+    <Content Include="gojs\extensionsTS\PortShiftingTool.js" />
+    <Content Include="gojs\extensionsTS\Radial.html" />
+    <Content Include="gojs\extensionsTS\RadialLayout.js" />
+    <Content Include="gojs\extensionsTS\RadialScript.js" />
+    <Content Include="gojs\extensionsTS\RealtimeDragSelecting.html" />
+    <Content Include="gojs\extensionsTS\RealtimeDragSelectingScript.js" />
+    <Content Include="gojs\extensionsTS\RealtimeDragSelectingTool.js" />
+    <Content Include="gojs\extensionsTS\ResizeMultiple.html" />
+    <Content Include="gojs\extensionsTS\ResizeMultipleScript.js" />
+    <Content Include="gojs\extensionsTS\ResizeMultipleTool.js" />
+    <Content Include="gojs\extensionsTS\Robot.html" />
+    <Content Include="gojs\extensionsTS\Robot.js" />
+    <Content Include="gojs\extensionsTS\RobotScript.js" />
+    <Content Include="gojs\extensionsTS\RotateMultiple.html" />
+    <Content Include="gojs\extensionsTS\RotateMultipleScript.js" />
+    <Content Include="gojs\extensionsTS\RotateMultipleTool.js" />
+    <Content Include="gojs\extensionsTS\RoundedRectangles.js" />
+    <Content Include="gojs\extensionsTS\RowResizingTool.js" />
+    <Content Include="gojs\extensionsTS\ScrollingTable.html" />
+    <Content Include="gojs\extensionsTS\ScrollingTable.js" />
+    <Content Include="gojs\extensionsTS\ScrollingTableScript.js" />
+    <Content Include="gojs\extensionsTS\SectorReshaping.html" />
+    <Content Include="gojs\extensionsTS\SectorReshapingScript.js" />
+    <Content Include="gojs\extensionsTS\SectorReshapingTool.js" />
+    <Content Include="gojs\extensionsTS\Serpentine.html" />
+    <Content Include="gojs\extensionsTS\SerpentineLayout.js" />
+    <Content Include="gojs\extensionsTS\SerpentineScript.js" />
+    <Content Include="gojs\extensionsTS\SnapLinkReshaping.html" />
+    <Content Include="gojs\extensionsTS\SnapLinkReshapingScript.js" />
+    <Content Include="gojs\extensionsTS\SnapLinkReshapingTool.js" />
+    <Content Include="gojs\extensionsTS\Spiral.html" />
+    <Content Include="gojs\extensionsTS\SpiralLayout.js" />
+    <Content Include="gojs\extensionsTS\SpiralScript.js" />
+    <Content Include="gojs\extensionsTS\Table.html" />
+    <Content Include="gojs\extensionsTS\TableLayout.js" />
+    <Content Include="gojs\extensionsTS\TableScript.js" />
+    <Content Include="gojs\extensionsTS\Templates.js" />
+    <Content Include="gojs\extensionsTS\TextEditor.html" />
+    <Content Include="gojs\extensionsTS\TextEditor.js" />
+    <Content Include="gojs\extensionsTS\TextEditorRadioButtons.js" />
+    <Content Include="gojs\extensionsTS\TextEditorScript.js" />
+    <Content Include="gojs\extensionsTS\TextEditorSelectBox.js" />
+    <Content Include="gojs\extensionsTS\TreeMap.html" />
+    <Content Include="gojs\extensionsTS\TreeMapLayout.js" />
+    <Content Include="gojs\extensionsTS\TreeMapScript.js" />
+    <Content Include="gojs\extensions\Arrowheads.js" />
+    <Content Include="gojs\extensions\assets\spectrum.css" />
+    <Content Include="gojs\extensions\assets\spectrum.js" />
+    <Content Include="gojs\extensions\BalloonLink.html" />
+    <Content Include="gojs\extensions\BalloonLink.js" />
+    <Content Include="gojs\extensions\BPMN.css" />
+    <Content Include="gojs\extensions\BPMN.html" />
+    <Content Include="gojs\extensions\BPMN.js" />
+    <Content Include="gojs\extensions\BPMNClasses.js" />
+    <Content Include="gojs\extensions\BPMNdata\BasicOrderProcess.png" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.1.png" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.2.png" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.3.png" />
+    <Content Include="gojs\extensions\Buttons.js" />
+    <Content Include="gojs\extensions\CheckBoxes.html" />
+    <Content Include="gojs\extensions\ColumnResizing.html" />
+    <Content Include="gojs\extensions\ColumnResizingTool.js" />
+    <Content Include="gojs\extensions\CurvedLinkReshaping.html" />
+    <Content Include="gojs\extensions\CurvedLinkReshapingTool.js" />
+    <Content Include="gojs\extensions\DataInspector.css" />
+    <Content Include="gojs\extensions\DataInspector.html" />
+    <Content Include="gojs\extensions\DataInspector.js" />
+    <Content Include="gojs\extensions\DebugInspector.css" />
+    <Content Include="gojs\extensions\DebugInspector.html" />
+    <Content Include="gojs\extensions\DebugInspector.js" />
+    <Content Include="gojs\extensions\Dimensioning.html" />
+    <Content Include="gojs\extensions\DimensioningLink.js" />
+    <Content Include="gojs\extensions\DragCreating.html" />
+    <Content Include="gojs\extensions\DragCreatingTool.js" />
+    <Content Include="gojs\extensions\DragZooming.html" />
+    <Content Include="gojs\extensions\DragZoomingTool.js" />
+    <Content Include="gojs\extensions\DrawCommandHandler.html" />
+    <Content Include="gojs\extensions\DrawCommandHandler.js" />
+    <Content Include="gojs\extensions\ExtendedBrush.js" />
+    <Content Include="gojs\extensions\Figures.js" />
+    <Content Include="gojs\extensions\Fishbone.html" />
+    <Content Include="gojs\extensions\FishboneLayout.js" />
+    <Content Include="gojs\extensions\FloorPlanEditor.html" />
+    <Content Include="gojs\extensions\FloorPlanMonitor.html" />
+    <Content Include="gojs\extensions\FloorPlanner.html" />
+    <Content Include="gojs\extensions\FreehandDrawing.html" />
+    <Content Include="gojs\extensions\FreehandDrawingTool.js" />
+    <Content Include="gojs\extensions\GeometryReshaping.html" />
+    <Content Include="gojs\extensions\GeometryReshapingTool.js" />
+    <Content Include="gojs\extensions\GuidedDragging.html" />
+    <Content Include="gojs\extensions\GuidedDraggingTool.js" />
+    <Content Include="gojs\extensions\Hyperlink.html" />
+    <Content Include="gojs\extensions\HyperlinkText.js" />
+    <Content Include="gojs\extensions\index.html" />
+    <Content Include="gojs\extensions\Inspector.html" />
+    <Content Include="gojs\extensions\LightBoxContextMenu.css" />
+    <Content Include="gojs\extensions\LightBoxContextMenu.js" />
+    <Content Include="gojs\extensions\LinkLabelDragging.html" />
+    <Content Include="gojs\extensions\LinkLabelDraggingTool.js" />
+    <Content Include="gojs\extensions\LinkLabelOnPathDragging.html" />
+    <Content Include="gojs\extensions\LinkLabelOnPathDraggingTool.js" />
+    <Content Include="gojs\extensions\LinkShifting.html" />
+    <Content Include="gojs\extensions\LinkShiftingTool.js" />
+    <Content Include="gojs\extensions\LocalStorageCommandHandler.html" />
+    <Content Include="gojs\extensions\LocalStorageCommandHandler.js" />
+    <Content Include="gojs\extensions\NodeLabelDragging.html" />
+    <Content Include="gojs\extensions\NodeLabelDraggingTool.js" />
+    <Content Include="gojs\extensions\NonRealtimeDragging.html" />
+    <Content Include="gojs\extensions\NonRealtimeDraggingTool.js" />
+    <Content Include="gojs\extensions\OrthogonalLinkReshaping.html" />
+    <Content Include="gojs\extensions\OrthogonalLinkReshapingTool.js" />
+    <Content Include="gojs\extensions\Parallel.html" />
+    <Content Include="gojs\extensions\ParallelLayout.js" />
+    <Content Include="gojs\extensions\ParallelRoute.html" />
+    <Content Include="gojs\extensions\ParallelRouteLink.js" />
+    <Content Include="gojs\extensions\PolygonDrawing.html" />
+    <Content Include="gojs\extensions\PolygonDrawingTool.js" />
+    <Content Include="gojs\extensions\PolylineLinking.html" />
+    <Content Include="gojs\extensions\PolylineLinkingTool.js" />
+    <Content Include="gojs\extensions\PortShifting.html" />
+    <Content Include="gojs\extensions\PortShiftingTool.js" />
+    <Content Include="gojs\extensions\RadialLayout.js" />
+    <Content Include="gojs\extensions\RealtimeDragSelecting.html" />
+    <Content Include="gojs\extensions\RealtimeDragSelectingTool.js" />
+    <Content Include="gojs\extensions\ResizeMultiple.html" />
+    <Content Include="gojs\extensions\ResizeMultipleTool.js" />
+    <Content Include="gojs\extensions\Robot.html" />
+    <Content Include="gojs\extensions\Robot.js" />
+    <Content Include="gojs\extensions\RotateMultiple.html" />
+    <Content Include="gojs\extensions\RotateMultipleTool.js" />
+    <Content Include="gojs\extensions\RoundedRectangles.js" />
+    <Content Include="gojs\extensions\RowResizingTool.js" />
+    <Content Include="gojs\extensions\ScrollingTable.html" />
+    <Content Include="gojs\extensions\ScrollingTable.js" />
+    <Content Include="gojs\extensions\SectorReshaping.html" />
+    <Content Include="gojs\extensions\SectorReshapingTool.js" />
+    <Content Include="gojs\extensions\Serpentine.html" />
+    <Content Include="gojs\extensions\SerpentineLayout.js" />
+    <Content Include="gojs\extensions\SnapLinkReshaping.html" />
+    <Content Include="gojs\extensions\SnapLinkReshapingTool.js" />
+    <Content Include="gojs\extensions\Spiral.html" />
+    <Content Include="gojs\extensions\SpiralLayout.js" />
+    <Content Include="gojs\extensions\Table.html" />
+    <Content Include="gojs\extensions\TableLayout.js" />
+    <Content Include="gojs\extensions\Templates.js" />
+    <Content Include="gojs\extensions\TextEditor.html" />
+    <Content Include="gojs\extensions\TextEditor.js" />
+    <Content Include="gojs\extensions\TextEditorRadioButtons.js" />
+    <Content Include="gojs\extensions\TextEditorSelectBox.js" />
+    <Content Include="gojs\extensions\TreeMap.html" />
+    <Content Include="gojs\extensions\TreeMapLayout.js" />
+    <Content Include="gojs\index.html" />
+    <Content Include="gojs\intro\brush.html" />
+    <Content Include="gojs\intro\buildingObjects.html" />
+    <Content Include="gojs\intro\buttons.html" />
+    <Content Include="gojs\intro\changedEvents.html" />
+    <Content Include="gojs\intro\collections.html" />
+    <Content Include="gojs\intro\commands.html" />
+    <Content Include="gojs\intro\connectionPoints.html" />
+    <Content Include="gojs\intro\contextMenus.html" />
+    <Content Include="gojs\intro\dataBinding.html" />
+    <Content Include="gojs\intro\debugging.html" />
+    <Content Include="gojs\intro\deployment.html" />
+    <Content Include="gojs\intro\events.html" />
+    <Content Include="gojs\intro\extensions.html" />
+    <Content Include="gojs\intro\geometry.html" />
+    <Content Include="gojs\intro\goIntro.js" />
+    <Content Include="gojs\intro\graduatedPanels.html" />
+    <Content Include="gojs\intro\grids.html" />
+    <Content Include="gojs\intro\groups.html" />
+    <Content Include="gojs\intro\highlighting.html" />
+    <Content Include="gojs\intro\HTMLInteraction.html" />
+    <Content Include="gojs\intro\images\100x65.png" />
+    <Content Include="gojs\intro\images\120x160.png" />
+    <Content Include="gojs\intro\images\50x40.png" />
+    <Content Include="gojs\intro\images\gcsmSelectStorageService.PNG" />
+    <Content Include="gojs\intro\images\pattern.jpg" />
+    <Content Include="gojs\intro\images\tiger-noWidthHeightSpecified.svg" />
+    <Content Include="gojs\intro\images\tiger.svg" />
+    <Content Include="gojs\intro\index.html" />
+    <Content Include="gojs\intro\initialView.html" />
+    <Content Include="gojs\intro\itemArrays.html" />
+    <Content Include="gojs\intro\layers.html" />
+    <Content Include="gojs\intro\layouts.html" />
+    <Content Include="gojs\intro\legends.html" />
+    <Content Include="gojs\intro\linkLabels.html" />
+    <Content Include="gojs\intro\links.html" />
+    <Content Include="gojs\intro\makingImages.html" />
+    <Content Include="gojs\intro\makingSVG.html" />
+    <Content Include="gojs\intro\nodes.html" />
+    <Content Include="gojs\intro\overview.html" />
+    <Content Include="gojs\intro\palette.html" />
+    <Content Include="gojs\intro\panels.html" />
+    <Content Include="gojs\intro\performance.html" />
+    <Content Include="gojs\intro\permissions.html" />
+    <Content Include="gojs\intro\pictures.html" />
+    <Content Include="gojs\intro\ports.html" />
+    <Content Include="gojs\intro\printing.html" />
+    <Content Include="gojs\intro\resizing.html" />
+    <Content Include="gojs\intro\selection.html" />
+    <Content Include="gojs\intro\serverSideImages.html" />
+    <Content Include="gojs\intro\shapes.html" />
+    <Content Include="gojs\intro\sizedGroups.html" />
+    <Content Include="gojs\intro\sizing.html" />
+    <Content Include="gojs\intro\storage.html" />
+    <Content Include="gojs\intro\subgraphs.html" />
+    <Content Include="gojs\intro\subtrees.html" />
+    <Content Include="gojs\intro\tablePanels.html" />
+    <Content Include="gojs\intro\templateMaps.html" />
+    <Content Include="gojs\intro\textBlocks.html" />
+    <Content Include="gojs\intro\tools.html" />
+    <Content Include="gojs\intro\tooltips.html" />
+    <Content Include="gojs\intro\transactions.html" />
+    <Content Include="gojs\intro\trees.html" />
+    <Content Include="gojs\intro\usingModels.html" />
+    <Content Include="gojs\intro\validation.html" />
+    <Content Include="gojs\intro\viewport.html" />
+    <Content Include="gojs\learn\cat1.png" />
+    <Content Include="gojs\learn\cat2.png" />
+    <Content Include="gojs\learn\cat3.png" />
+    <Content Include="gojs\learn\cat4.png" />
+    <Content Include="gojs\learn\cat5.png" />
+    <Content Include="gojs\learn\cat6.png" />
+    <Content Include="gojs\learn\graphobject.html" />
+    <Content Include="gojs\learn\index.html" />
+    <Content Include="gojs\learn\interactivity.html" />
+    <Content Include="gojs\learn\video-tutorial-intro.html" />
+    <Content Include="gojs\projects\angular-basic\karma.conf.js" />
+    <Content Include="gojs\projects\angular-basic\protractor.conf.js" />
+    <Content Include="gojs\projects\angular-basic\src\app\app.component.css" />
+    <Content Include="gojs\projects\angular-basic\src\app\app.component.html" />
+    <Content Include="gojs\projects\angular-basic\src\app\diagram-editor\diagram-editor.component.css" />
+    <Content Include="gojs\projects\angular-basic\src\app\diagram-editor\diagram-editor.component.html" />
+    <Content Include="gojs\projects\angular-basic\src\favicon.ico" />
+    <Content Include="gojs\projects\angular-basic\src\index.html" />
+    <Content Include="gojs\projects\angular-basic\src\styles.css" />
+    <Content Include="gojs\projects\cordova-circuit\config.xml" />
+    <Content Include="gojs\projects\cordova-circuit\www\css\index.css" />
+    <Content Include="gojs\projects\cordova-circuit\www\img\logo.png" />
+    <Content Include="gojs\projects\cordova-circuit\www\index.html" />
+    <Content Include="gojs\projects\cordova-circuit\www\js\index.js" />
+    <Content Include="gojs\projects\cordova-circuit\www\js\logicCircuit.js" />
+    <Content Include="gojs\projects\electron-circuit\logicCircuit.html" />
+    <Content Include="gojs\projects\electron-circuit\main.js" />
+    <Content Include="gojs\projects\electron-circuit\PortShiftingTool.js" />
+    <Content Include="gojs\projects\floorplanner\Floorplan.js" />
+    <Content Include="gojs\projects\floorplanner\FloorplanFilesystem.js" />
+    <Content Include="gojs\projects\floorplanner\Floorplanner-Constants.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner-Templates-Furniture.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner-Templates-General.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner-Templates-Walls.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner-WallBuildingTool.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner-WallReshapingTool.js" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner.css" />
+    <Content Include="gojs\projects\floorplanner\FloorPlanner.html" />
+    <Content Include="gojs\projects\floorplanner\FloorplanPalette.js" />
+    <Content Include="gojs\projects\floorplanner\FloorplanUI.js" />
+    <Content Include="gojs\projects\floorplanner\icons\flipDoorOpeningLeft.png" />
+    <Content Include="gojs\projects\floorplanner\icons\flipDoorOpeningRight.png" />
+    <Content Include="gojs\projects\floorplanner\icons\flipDoorSide.png" />
+    <Content Include="gojs\projects\floorplanner\icons\selectionTool.png" />
+    <Content Include="gojs\projects\floorplanner\icons\wallBuildingTool.png" />
+    <Content Include="gojs\projects\nw-circuit\logicCircuit.html" />
+    <Content Include="gojs\projects\nw-circuit\PortShiftingTool.js" />
+    <Content Include="gojs\projects\phantom-circuit\logicCircuit.js" />
+    <Content Include="gojs\release\go-debug.js" />
+    <Content Include="gojs\release\go.js" />
+    <Content Include="gojs\samples\absolute.html" />
+    <Content Include="gojs\samples\addRemoveColumns.html" />
+    <Content Include="gojs\samples\adornmentButtons.html" />
+    <Content Include="gojs\samples\all.html" />
+    <Content Include="gojs\samples\angular.html" />
+    <Content Include="gojs\samples\arrowheads.html" />
+    <Content Include="gojs\samples\assets\d3.js" />
+    <Content Include="gojs\samples\assets\peity.js" />
+    <Content Include="gojs\samples\assets\require.js" />
+    <Content Include="gojs\samples\assets\WebGL\angeles.js" />
+    <Content Include="gojs\samples\assets\WebGL\demo.js" />
+    <Content Include="gojs\samples\assets\WebGL\log.js" />
+    <Content Include="gojs\samples\assets\WebGL\matrix4x4.js" />
+    <Content Include="gojs\samples\assets\WebGL\OESVertexArrayObject.js" />
+    <Content Include="gojs\samples\assets\WebGL\webgl-debug.js" />
+    <Content Include="gojs\samples\assets\WebGL\webgl-utils.js" />
+    <Content Include="gojs\samples\barCharts.html" />
+    <Content Include="gojs\samples\basic.html" />
+    <Content Include="gojs\samples\beatPaths.html" />
+    <Content Include="gojs\samples\candlestickCharts.html" />
+    <Content Include="gojs\samples\canvases.html" />
+    <Content Include="gojs\samples\classHierarchy.html" />
+    <Content Include="gojs\samples\cLayout.html" />
+    <Content Include="gojs\samples\comments.html" />
+    <Content Include="gojs\samples\conceptMap.html" />
+    <Content Include="gojs\samples\constantSize.html" />
+    <Content Include="gojs\samples\contentAlign.html" />
+    <Content Include="gojs\samples\curviness.html" />
+    <Content Include="gojs\samples\customContextMenu.html" />
+    <Content Include="gojs\samples\customExpandCollapse.html" />
+    <Content Include="gojs\samples\customTextEditingTool.html" />
+    <Content Include="gojs\samples\dataFlow.html" />
+    <Content Include="gojs\samples\dataFlowVertical.html" />
+    <Content Include="gojs\samples\dataVisualization.html" />
+    <Content Include="gojs\samples\decisionTree.html" />
+    <Content Include="gojs\samples\distances.html" />
+    <Content Include="gojs\samples\DOMTree.html" />
+    <Content Include="gojs\samples\doubleCircle.html" />
+    <Content Include="gojs\samples\doubleTree.html" />
+    <Content Include="gojs\samples\doubleTreeJSON.html" />
+    <Content Include="gojs\samples\dragDropFields.html" />
+    <Content Include="gojs\samples\draggableLink.html" />
+    <Content Include="gojs\samples\draggablePorts.html" />
+    <Content Include="gojs\samples\dragOutFields.html" />
+    <Content Include="gojs\samples\dragUnoccupied.html" />
+    <Content Include="gojs\samples\dynamicPieChart.html" />
+    <Content Include="gojs\samples\dynamicPorts.html" />
+    <Content Include="gojs\samples\entityRelationship.html" />
+    <Content Include="gojs\samples\euler.html" />
+    <Content Include="gojs\samples\familyTree.html" />
+    <Content Include="gojs\samples\familyTreeJP.html" />
+    <Content Include="gojs\samples\faultTree.html" />
+    <Content Include="gojs\samples\fdLayout.html" />
+    <Content Include="gojs\samples\flowBuilder.html" />
+    <Content Include="gojs\samples\flowchart.html" />
+    <Content Include="gojs\samples\flowgrammer.html" />
+    <Content Include="gojs\samples\friendWheel.html" />
+    <Content Include="gojs\samples\gantt.html" />
+    <Content Include="gojs\samples\genogram.html" />
+    <Content Include="gojs\samples\gestureBehavior.html" />
+    <Content Include="gojs\samples\gLayout.html" />
+    <Content Include="gojs\samples\grafcet.html" />
+    <Content Include="gojs\samples\grouping.html" />
+    <Content Include="gojs\samples\hoverButtons.html" />
+    <Content Include="gojs\samples\htmlDragDrop.html" />
+    <Content Include="gojs\samples\htmlInteraction.html" />
+    <Content Include="gojs\samples\htmlLightBoxContextMenu.html" />
+    <Content Include="gojs\samples\icons.html" />
+    <Content Include="gojs\samples\icons.js" />
+    <Content Include="gojs\samples\images\50x40.png" />
+    <Content Include="gojs\samples\images\55x55.png" />
+    <Content Include="gojs\samples\images\60x90.png" />
+    <Content Include="gojs\samples\images\80x50.png" />
+    <Content Include="gojs\samples\images\closedFolder.png" />
+    <Content Include="gojs\samples\images\content engine.jpg" />
+    <Content Include="gojs\samples\images\document.png" />
+    <Content Include="gojs\samples\images\general processor.jpg" />
+    <Content Include="gojs\samples\images\HS1.png" />
+    <Content Include="gojs\samples\images\HS10.png" />
+    <Content Include="gojs\samples\images\HS11.png" />
+    <Content Include="gojs\samples\images\HS12.png" />
+    <Content Include="gojs\samples\images\HS13.png" />
+    <Content Include="gojs\samples\images\HS14.png" />
+    <Content Include="gojs\samples\images\HS15.png" />
+    <Content Include="gojs\samples\images\HS16.png" />
+    <Content Include="gojs\samples\images\HS2.png" />
+    <Content Include="gojs\samples\images\HS3.png" />
+    <Content Include="gojs\samples\images\HS4.png" />
+    <Content Include="gojs\samples\images\HS5.png" />
+    <Content Include="gojs\samples\images\HS6.png" />
+    <Content Include="gojs\samples\images\HS7.png" />
+    <Content Include="gojs\samples\images\HS8.png" />
+    <Content Include="gojs\samples\images\HS9.png" />
+    <Content Include="gojs\samples\images\HSnopic.png" />
+    <Content Include="gojs\samples\images\iptv broadcast server.jpg" />
+    <Content Include="gojs\samples\images\openFolder.png" />
+    <Content Include="gojs\samples\images\pc.jpg" />
+    <Content Include="gojs\samples\images\server switch.jpg" />
+    <Content Include="gojs\samples\images\storage array.jpg" />
+    <Content Include="gojs\samples\images\voice atm switch.jpg" />
+    <Content Include="gojs\samples\incrementalTree.html" />
+    <Content Include="gojs\samples\index.html" />
+    <Content Include="gojs\samples\indexList.js" />
+    <Content Include="gojs\samples\instrumentGauge.html" />
+    <Content Include="gojs\samples\interactiveForce.html" />
+    <Content Include="gojs\samples\IVRtree.html" />
+    <Content Include="gojs\samples\jQueryDragDrop.html" />
+    <Content Include="gojs\samples\kanban.html" />
+    <Content Include="gojs\samples\kittenMonitor.html" />
+    <Content Include="gojs\samples\ldLayout.html" />
+    <Content Include="gojs\samples\leaflet.html" />
+    <Content Include="gojs\samples\linksToLinks.html" />
+    <Content Include="gojs\samples\localView.html" />
+    <Content Include="gojs\samples\logicCircuit.html" />
+    <Content Include="gojs\samples\macros.html" />
+    <Content Include="gojs\samples\magnifier.html" />
+    <Content Include="gojs\samples\mindMap.html" />
+    <Content Include="gojs\samples\minimal.html" />
+    <Content Include="gojs\samples\minimal.xml" />
+    <Content Include="gojs\samples\minimalBlob.html" />
+    <Content Include="gojs\samples\minimalJSON.html" />
+    <Content Include="gojs\samples\minimalSvg.html" />
+    <Content Include="gojs\samples\minimalXML.html" />
+    <Content Include="gojs\samples\multiArrow.html" />
+    <Content Include="gojs\samples\multiNodePathLinks.html" />
+    <Content Include="gojs\samples\navigation.html" />
+    <Content Include="gojs\samples\network.html" />
+    <Content Include="gojs\samples\orgChartAssistants.html" />
+    <Content Include="gojs\samples\orgChartEditor.html" />
+    <Content Include="gojs\samples\orgChartExtras.html" />
+    <Content Include="gojs\samples\orgChartStatic.html" />
+    <Content Include="gojs\samples\pageFlow.html" />
+    <Content Include="gojs\samples\parseTree.html" />
+    <Content Include="gojs\samples\pathAnimation.html" />
+    <Content Include="gojs\samples\PERT.html" />
+    <Content Include="gojs\samples\pieCharts.html" />
+    <Content Include="gojs\samples\pipes.html" />
+    <Content Include="gojs\samples\pipeTree.html" />
+    <Content Include="gojs\samples\planogram.html" />
+    <Content Include="gojs\samples\processFlow.html" />
+    <Content Include="gojs\samples\productionProcess.html" />
+    <Content Include="gojs\samples\radial.html" />
+    <Content Include="gojs\samples\radialPartition.html" />
+    <Content Include="gojs\samples\records.html" />
+    <Content Include="gojs\samples\regrouping.html" />
+    <Content Include="gojs\samples\regroupingScaled.html" />
+    <Content Include="gojs\samples\regroupingTreeView.html" />
+    <Content Include="gojs\samples\relationships.html" />
+    <Content Include="gojs\samples\require.html" />
+    <Content Include="gojs\samples\roundedGroups.html" />
+    <Content Include="gojs\samples\ruleredDiagram.html" />
+    <Content Include="gojs\samples\sankey.html" />
+    <Content Include="gojs\samples\scrollModes.html" />
+    <Content Include="gojs\samples\seatingChart.html" />
+    <Content Include="gojs\samples\selectableFields.html" />
+    <Content Include="gojs\samples\selectablePorts.html" />
+    <Content Include="gojs\samples\sequenceDiagram.html" />
+    <Content Include="gojs\samples\sequentialFunction.html" />
+    <Content Include="gojs\samples\shapes.html" />
+    <Content Include="gojs\samples\sharedStates.html" />
+    <Content Include="gojs\samples\shopFloorMonitor.html" />
+    <Content Include="gojs\samples\spacingZoom.html" />
+    <Content Include="gojs\samples\sparklineGraphs.html" />
+    <Content Include="gojs\samples\spreadsheet.html" />
+    <Content Include="gojs\samples\stateChart.html" />
+    <Content Include="gojs\samples\stateChartIncremental.html" />
+    <Content Include="gojs\samples\swimBands.html" />
+    <Content Include="gojs\samples\swimLanes.html" />
+    <Content Include="gojs\samples\swimLanesVertical.html" />
+    <Content Include="gojs\samples\systemDynamics.html" />
+    <Content Include="gojs\samples\tabs.html" />
+    <Content Include="gojs\samples\taperedLinks.html" />
+    <Content Include="gojs\samples\thermometer.html" />
+    <Content Include="gojs\samples\tiger.html" />
+    <Content Include="gojs\samples\timeline.html" />
+    <Content Include="gojs\samples\tLayout.html" />
+    <Content Include="gojs\samples\tournament.html" />
+    <Content Include="gojs\samples\treeMapper.html" />
+    <Content Include="gojs\samples\treeView.html" />
+    <Content Include="gojs\samples\triStateCheckBoxTree.html" />
+    <Content Include="gojs\samples\twoDiagrams.html" />
+    <Content Include="gojs\samples\twoHalves.html" />
+    <Content Include="gojs\samples\umlClass.html" />
+    <Content Include="gojs\samples\updateDemo.html" />
+    <Content Include="gojs\samples\virtualized.html" />
+    <Content Include="gojs\samples\virtualizedForceLayout.html" />
+    <Content Include="gojs\samples\virtualizedTree.html" />
+    <Content Include="gojs\samples\virtualizedTreeLayout.html" />
+    <Content Include="gojs\samples\visualTree.html" />
+    <Content Include="gojs\samples\visualTreeGrouping.html" />
+    <Content Include="gojs\samples\vue.html" />
+    <Content Include="gojs\samples\zoomPinch.html" />
+    <Content Include="gojs\storage\api\assets\css\main.css" />
+    <Content Include="gojs\storage\api\assets\images\icons%402x.png" />
+    <Content Include="gojs\storage\api\assets\images\icons.png" />
+    <Content Include="gojs\storage\api\assets\images\widgets%402x.png" />
+    <Content Include="gojs\storage\api\assets\images\widgets.png" />
+    <Content Include="gojs\storage\api\assets\js\lib\backbone-1.1.2.min.js" />
+    <Content Include="gojs\storage\api\assets\js\lib\jquery-2.1.1.min.js" />
+    <Content Include="gojs\storage\api\assets\js\lib\lunr.min.js" />
+    <Content Include="gojs\storage\api\assets\js\lib\underscore-1.6.0.min.js" />
+    <Content Include="gojs\storage\api\assets\js\main.js" />
+    <Content Include="gojs\storage\api\assets\js\search.js" />
+    <Content Include="gojs\storage\api\assets\licensing.txt" />
+    <Content Include="gojs\storage\api\index.html" />
+    <Content Include="gojs\storage\api\symbols\DiagramFile.html" />
+    <Content Include="gojs\storage\api\symbols\GoCloudStorage.html" />
+    <Content Include="gojs\storage\api\symbols\GoCloudStorageManager.html" />
+    <Content Include="gojs\storage\api\symbols\GoDropBox.html" />
+    <Content Include="gojs\storage\api\symbols\GoGoogleDrive.html" />
+    <Content Include="gojs\storage\api\symbols\GoLocalStorage.html" />
+    <Content Include="gojs\storage\api\symbols\GoOneDrive.html" />
+    <Content Include="gojs\storage\assets\css\bootstrap.min.css" />
+    <Content Include="gojs\storage\assets\js\api.js" />
+    <Content Include="gojs\storage\assets\js\bootstrap.min.js" />
+    <Content Include="gojs\storage\goCloudStorageIcons\dropBox.png" />
+    <Content Include="gojs\storage\goCloudStorageIcons\gitHub.png" />
+    <Content Include="gojs\storage\goCloudStorageIcons\googleDrive.jpg" />
+    <Content Include="gojs\storage\goCloudStorageIcons\localStorage.png" />
+    <Content Include="gojs\storage\goCloudStorageIcons\oneDrive.png" />
+    <Content Include="gojs\storage\lib\gcs.js" />
+    <Content Include="gojs\storage\samples\GoCloudStorageManager.html" />
+    <Content Include="gojs\storage\samples\GoCloudStorageUI.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="gojs\api\search.json" />
+    <Content Include="gojs\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="gojs\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="gojs\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="gojs\bower.json" />
+    <Content Include="gojs\extensionsTS\tsconfig.json" />
+    <Content Include="gojs\extensions\BPMNdata\BasicOrderProcess.json" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.1.json" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.2.json" />
+    <Content Include="gojs\extensions\BPMNdata\OMG BPMN by Example Figure 5.3.json" />
+    <Content Include="gojs\package.json" />
+    <Content Include="gojs\projects\angular-basic\e2e\tsconfig.e2e.json" />
+    <Content Include="gojs\projects\angular-basic\package.json" />
+    <Content Include="gojs\projects\angular-basic\README.md" />
+    <Content Include="gojs\projects\angular-basic\src\tsconfig.app.json" />
+    <Content Include="gojs\projects\angular-basic\src\tsconfig.spec.json" />
+    <Content Include="gojs\projects\angular-basic\tsconfig.json" />
+    <Content Include="gojs\projects\angular-basic\tslint.json" />
+    <Content Include="gojs\projects\electron-circuit\package.json" />
+    <Content Include="gojs\projects\electron-circuit\README.md" />
+    <Content Include="gojs\projects\nw-circuit\package.json" />
+    <Content Include="gojs\projects\nw-circuit\README.md" />
+    <Content Include="gojs\projects\phantom-circuit\package.json" />
+    <Content Include="gojs\projects\phantom-circuit\README.md" />
+    <Content Include="gojs\README.md" />
+    <Content Include="gojs\samples\doubleTree.json" />
+    <Content Include="gojs\samples\minimal.json" />
+    <Content Include="gojs\storage\tsconfig.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Home\Diagram.cshtml" />
+    <Content Include="Views\Home\Kendo.cshtml" />
+    <Content Include="Views\Shared\_Layout3.cshtml" />
+    <Content Include="Content\admin\adminWorkflow.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="gojs\extensionsTS\Arrowheads.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\BalloonLink.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\BalloonLinkScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\BPMNClasses.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\BPMNScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\Buttons.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\CheckBoxesScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ColumnResizingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ColumnResizingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\CurvedLinkReshapingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\CurvedLinkReshapingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DataInspector.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DataInspectorScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DimensioningLink.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DimensioningScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DragCreatingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DragCreatingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DragZoomingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DragZoomingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DrawCommandHandler.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\DrawCommandHandlerScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ExtendedBrush.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\Figures.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FishboneLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FishboneScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FloorPlanEditorScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FloorPlanMonitorScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FreehandDrawingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\FreehandDrawingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\GeometryReshapingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\GeometryReshapingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\GuidedDraggingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\GuidedDraggingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\HyperlinkScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\HyperlinkText.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LightBoxContextMenu.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkLabelDraggingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkLabelDraggingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkLabelOnPathDraggingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkLabelOnPathDraggingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkShiftingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LinkShiftingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LocalStorageCommandHandler.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\LocalStorageCommandHandlerScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\NodeLabelDraggingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\NodeLabelDraggingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\NonRealtimeDraggingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\NonRealtimeDraggingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\OrthogonalLinkReshapingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\OrthogonalLinkReshapingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ParallelLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ParallelRouteLink.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ParallelRouteScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ParallelScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PolygonDrawingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PolygonDrawingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PolylineLinkingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PolylineLinkingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PortShiftingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\PortShiftingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RadialLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RadialScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RealtimeDragSelectingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RealtimeDragSelectingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ResizeMultipleScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ResizeMultipleTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\Robot.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RobotScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RotateMultipleScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RotateMultipleTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RoundedRectangles.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\RowResizingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ScrollingTable.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\ScrollingTableScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SectorReshapingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SectorReshapingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SerpentineLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SerpentineScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SnapLinkReshapingScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SnapLinkReshapingTool.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SpiralLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\SpiralScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TableLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TableScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\Templates.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TextEditor.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TextEditorRadioButtons.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TextEditorScript.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TextEditorSelectBox.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TreeMapLayout.ts" />
+    <TypeScriptCompile Include="gojs\extensionsTS\TreeMapScript.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\e2e\app.po.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\app\app.component.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\app\app.module.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\app\diagram-editor\diagram-editor.component.spec.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\app\diagram-editor\diagram-editor.component.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\environments\environment.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\main.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\polyfills.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\test.ts" />
+    <TypeScriptCompile Include="gojs\projects\angular-basic\src\typings.d.ts" />
+    <TypeScriptCompile Include="gojs\release\go-debug.d.ts" />
+    <TypeScriptCompile Include="gojs\release\go.d.ts" />
+    <TypeScriptCompile Include="gojs\storage\lib\gcs.d.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoCloudStorage.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\goCloudStorageFiles.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoCloudStorageManager.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoDropBox.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoGoogleDrive.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoLocalStorage.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoNetCore.ts" />
+    <TypeScriptCompile Include="gojs\storage\src\GoOneDrive.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50555</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50555/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

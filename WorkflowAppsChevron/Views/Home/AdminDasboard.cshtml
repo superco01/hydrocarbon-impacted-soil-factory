@@ -1,0 +1,65 @@
+@{
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+        <link rel="stylesheet" href="../../Content/admin/adminWorkflow.css" />
+        <script src="../../Scripts/admin/adminWorkflow.js"></script>
+        <script src="../../gojs/release/go.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body id= myBody onload="init()">     
+   
+<div id="sample">
+
+    <font class="myFont2">Tools</font>
+    <button class="button button2">
+    <font class="myFont">Create a new Workflow</font>
+    </button>
+
+       <input id="tools" type="button"
+       onclick="myDiagram.commandHandler.selectAll()" value="Select All" />
+       <input id="tools" type="button"
+       onclick="myDiagram.commandHandler.undo()" value="Undo" />
+       <input id="tools" type="button"
+       onclick="myDiagram.commandHandler.redo()" value="Redo" />
+
+  <div id="myBox">
+    <div id="myPaletteDiv"></div>
+    <div id="myDiagramDiv"></div>
+
+
+  </div>
+  <button class="buttonSave button2Save">
+    <font class="myFont">Save Workflow</font>
+    </button>
+ 
+  <button id="SaveButton" onclick="save()">Save</button>
+  <button onclick="load()">Load</button>
+  Diagram Model saved in JSON format:
+  <textarea id="mySavedModel"">
+{ "class": "go.GraphLinksModel",
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [ 
+
+ ],
+  "linkDataArray": [ 
+
+ ]}
+  </textarea>
+
+
+  <p>Click the button below to render the current GoJS Diagram into SVG at one-half scale.
+     The SVG is not interactive like the GoJS diagram, but can be used for printing or display.
+     For more information, see the page on <a href="../intro/makingSVG.html">making SVG</a>.</p>
+  <button onclick="makeSVG()">Render as SVG</button>
+  <div id="SVGArea"></div>
+
+</div>
+
+</body>
+</html>
+</p>

@@ -1,0 +1,106 @@
+
+ 
+#myBody{
+    background-color: #0056A1;
+}
+
+#myBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} 
+
+#myPaletteDiv{
+    width: 200px;
+    height: 600px;
+    margin-right: 1px; 
+    background-color: white;
+    border: solid 2px black; 
+    border-radius: 5px;
+
+}
+
+#myDiagramDiv{
+    flex-grow: 1;
+    height: 600px;
+    border: solid 1px black;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+
+}
+
+#mySavedModel{
+    width: 100%;
+    height: 200px;
+}
+
+#tools{
+    background-color: #2c3e50;
+    color:white;
+}
+
+.button {
+    background-color: #0056A1; /* Green */
+    border: none;
+        border-radius: 5px;
+
+    color: white;
+    padding: 0.5% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 10.6%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 8%;
+}
+
+.buttonSave {
+    background-color: #0056A1; /* Green */
+    border: none;
+        border-radius: 5px;
+    color: white;
+    padding: 1% 0.5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1%;
+    margin-left:92%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    height: : 0.1%;
+    cursor}
+
+.myFont{
+     font-size: 14px;
+     color:white;
+}
+.myFont2{
+
+     font-size: 14px;
+     color:white;
+     margin-left: 7%;
+}
+
+.button2 {
+    background-color: #0470cf; 
+    color: black; 
+    border: 2px solid white;
+}
+
+.button2:hover {
+    background-color: #047fea;
+    color: white;
+}
+
+.button2Save {
+    background-color: #c0392b; 
+    color: black; 
+    border: 2px solid #c0392b;
+}
+
+.button2Save:hover {
+    background-color: #e74c3c;
+    color: white;
+}
