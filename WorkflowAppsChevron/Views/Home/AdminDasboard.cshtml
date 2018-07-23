@@ -1,65 +1,88 @@
 @{
     Layout = "~/Views/Shared/_Layout3.cshtml";
 }
-        <link rel="stylesheet" href="../../Content/admin/adminWorkflow.css" />
-        <script src="../../Scripts/admin/adminWorkflow.js"></script>
-        <script src="../../gojs/release/go.js"></script>
 
-<!DOCTYPE html>
-<html>
 <head>
-
+    <link rel="stylesheet" href="../../Content/admin/adminWorkflow.css" />
+    <script src="../../Scripts/admin/adminWorkflow.js"></script>
+    <script src="../../gojs/release/go.js"></script>
 </head>
-<body id= myBody onload="init()">     
-   
-<div id="sample">
 
-    <font class="myFont2">Tools</font>
-    <button class="button button2">
-    <font class="myFont">Create a new Workflow</font>
-    </button>
+<body id=myBody onload="modalWindow()">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-       <input id="tools" type="button"
-       onclick="myDiagram.commandHandler.selectAll()" value="Select All" />
-       <input id="tools" type="button"
-       onclick="myDiagram.commandHandler.undo()" value="Undo" />
-       <input id="tools" type="button"
-       onclick="myDiagram.commandHandler.redo()" value="Redo" />
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please set Workflow Name</p>
+            <input id="wfName" type="text" name="workflowName" placeholder="Workflow Name" />
+            <button id="doneBtn">Done</button>
+        </div>
 
-  <div id="myBox">
-    <div id="myPaletteDiv"></div>
-    <div id="myDiagramDiv"></div>
+    </div>
+
+    <div id="sample">
+        <div>
+            <h1><label class="wfHeader">Workflow Application</label></h1>
+        </div>
+        <div>
+            <label id="wfLabel" class="wfLabel"></label>
+            <label class="wfLabel"> Workflow</label>
+        </div>
+            
+        
+        
+
+        <input id="tools" type="button"
+               onclick="myDiagram.commandHandler.selectAll()" value="Select All" />
+        <input id="tools" type="button"
+               onclick="myDiagram.commandHandler.undo()" value="Undo" />
+        <input id="tools" type="button"
+               onclick="myDiagram.commandHandler.redo()" value="Redo" />
 
 
-  </div>
-  <button class="buttonSave button2Save">
-    <font class="myFont">Save Workflow</font>
-    </button>
- 
-  <button id="SaveButton" onclick="save()">Save</button>
-  <button onclick="load()">Load</button>
-  Diagram Model saved in JSON format:
-  <textarea id="mySavedModel"">
-{ "class": "go.GraphLinksModel",
-  "linkFromPortIdProperty": "fromPort",
-  "linkToPortIdProperty": "toPort",
-  "nodeDataArray": [ 
+        
+        <button id="wfBtn" class="button2">
+            <font class="myFont">Create a new Workflow</font>
+        </button>
 
- ],
-  "linkDataArray": [ 
+        
 
- ]}
+
+        <div id="myBox">
+            <div id="myPaletteDiv"></div>
+            <div id="myDiagramDiv"></div>
+
+
+        </div>
+        <button class="buttonSave button2Save">
+            <font class="myFont">Save Workflow</font>
+        </button>
+
+        <button id="SaveButton" onclick="save()">Save</button>
+        <button onclick="load()">Load</button>
+        Diagram Model saved in JSON format:
+        <textarea id="mySavedModel" ">
+{ " class": "go.GraphLinksModel" ,
+                  "linkFromPortIdProperty" : "fromPort" ,
+                  "linkToPortIdProperty" : "toPort" ,
+                  "nodeDataArray" : [
+                  ],
+                  "linkDataArray" : [
+                  ]}
   </textarea>
 
 
-  <p>Click the button below to render the current GoJS Diagram into SVG at one-half scale.
-     The SVG is not interactive like the GoJS diagram, but can be used for printing or display.
-     For more information, see the page on <a href="../intro/makingSVG.html">making SVG</a>.</p>
-  <button onclick="makeSVG()">Render as SVG</button>
-  <div id="SVGArea"></div>
+        <p>
+            Click the button below to render the current GoJS Diagram into SVG at one-half scale.
+            The SVG is not interactive like the GoJS diagram, but can be used for printing or display.
+            For more information, see the page on
+            <a href="../intro/makingSVG.html">making SVG</a>.
+        </p>
+        <button onclick="makeSVG()">Render as SVG</button>
+        <div id="SVGArea"></div>
 
-</div>
+    </div>
 
 </body>
-</html>
-</p>
